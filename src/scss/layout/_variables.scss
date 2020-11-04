@@ -1,0 +1,47 @@
+// == Breakpoints ===
+$breakpoints: (
+  small: 480px,
+  medium: 768px,
+  wide: 960px,
+  large: 1024px,
+  largest: 1280px
+);
+$pri-fn:#004085;
+$pri-bg:#cce5ff;
+$pri-border:#b8daff;
+$secondary-fn:#383d41;
+$secondary-bg:#e2e3e5;
+$secondary-border:#d6d8db;
+$success-fn:#155724;
+$success-bg:#d4edda;
+$success-border:#c3e6cb;
+$danger-fn:#721c24;
+$danger-bg:#f8d7da;
+$danger-border:#f5c6cb;
+$warning-fn:#856404;
+$warning-bg:#856404;
+$warning-border:#ffeeba;
+$info-fn:#0c5460;
+$info-bg:#d1ecf1;
+$info-border:#bee5eb;
+$light-fn:#818182;
+$light-bg:#fefefe;
+$light-border:#fdfdfe;
+$dark-fn:#1b1e21;
+$dark-bg:#d6d8d9;
+$dark-border:#c6c8ca;
+//button
+$btn-wfn:#fff;
+$btn-bfn:#212529;
+$btn-pri:#007bff;
+$btn-secondary:#6c757d;
+$btn-success:#28a745;
+$btn-danger:#dc3545;
+$btn-warning:#ffc107;
+$btn-info:#17a2b8;
+$btn-light:#f8f9fa;
+$btn-dark:#343a40;
+$btn-link:transparent;
+$disable:#212529;
+
+

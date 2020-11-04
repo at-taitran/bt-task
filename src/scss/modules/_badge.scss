@@ -1,0 +1,31 @@
+@mixin badge ($name,$color,$bgcolor) {
+    &-#{$name}{
+        color: $color;
+        background-color: $bgcolor;
+    }
+}
+.badge{
+    display: inline-block;
+    padding: .25em .4em;
+    white-space: nowrap;
+    vertical-align: baseline;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    border-radius: .25rem;
+    @include badge(pri,$btn-wfn,$btn-pri);
+    @include badge(secondary,$btn-wfn,$btn-secondary);
+    @include badge(success,$btn-wfn,$btn-success);
+    @include badge(danger,$btn-wfn,$btn-danger);
+    @include badge(warning,$btn-bfn,$btn-warning);
+    @include badge(info,$btn-wfn,$btn-info);
+    @include badge(light,$btn-bfn,$btn-light);
+    @include badge(dark,$btn-wfn,$btn-dark);
+    @include badge(link,$btn-bfn,$btn-link);
+    &-pill{
+        padding-right: .6em;
+        padding-left: .6em;
+        border-radius: 10rem;
+    }
+}

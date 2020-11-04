@@ -1,0 +1,22 @@
+.pagination{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: .25rem;
+}
+$pagin-bd:#dee2e6;
+.page-link{
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: $pri-border;
+    background-color: $btn-wfn;
+    border: 1px solid $pagin-bd;
+}
+.page-link:hover{
+    color: $btn-pri;
+}

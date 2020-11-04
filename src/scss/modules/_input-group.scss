@@ -1,0 +1,22 @@
+$inputgr-bg:#e9ecef;
+$inputgr-bd:#ced4da;
+
+
+.input-group{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    width: 100%;
+    &-text{
+        display: flex;
+        align-items: center;
+        padding: .75rem .75rem;
+        margin-bottom: 0;
+        text-align: center;
+        white-space: nowrap;
+        background-color: $inputgr-bg;
+        border:  1px solid $inputgr-bd;
+        border-radius: .25rem;
+    }
+}

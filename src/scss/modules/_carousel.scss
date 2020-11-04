@@ -1,0 +1,20 @@
+.slide{
+    position: relative;
+    height: 175px;
+}
+.mySlides{
+    display: none;
+}
+.display-left{
+    position: absolute;
+    left: 0px;
+    top: 50%;
+}
+.display-right{
+    position: absolute;
+    right:0px;
+    top: 50%;
+}
+.carousel{
+    @extend .container;
+}

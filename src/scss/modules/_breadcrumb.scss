@@ -1,0 +1,21 @@
+$bread-bg:#e9ecef;
+.breadcrumb{
+    display: flex;
+    flex-wrap: wrap;
+    padding: .75rem .75rem;
+    margin-bottom: 1rem;
+    list-style: none;
+    background-color:$bread-bg;
+    border-radius: .25rem;
+    // align-content: flex-start;
+    // flex-direction: row ;
+    &-item{
+        &.active{
+            color: $btn-secondary;
+        }
+    }
+    &-item::before{
+        display: inline-block;
+        content: "/";
+    }
+}

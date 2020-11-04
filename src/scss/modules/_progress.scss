@@ -1,0 +1,16 @@
+.progress{
+    display: block;
+    height: 1rem;
+    background-color: $secondary-bg;
+    position: relative;
+    border-radius: 0.2rem;
+}
+.progress-bar{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: inherit;
+    border-radius: .2rem;
+    width: 45%;
+    @include bg($btn-success);
+}

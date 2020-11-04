@@ -1,0 +1,25 @@
+.collapse{
+    display: none;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+.dropbtn{
+    @extend .dropdown;
+}
+$drop-bg:#f1f1f1;
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: $drop-bg;
+    z-index: 1;
+    top :100%;
+    left: 0px;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.show{
+    display: block;
+}
