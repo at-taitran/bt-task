@@ -1,17 +1,17 @@
 .navbar{
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: flex-start;
+    @include display-flex;
+    @include flex-wrap(wrap);
+    @include align-items(center);
+    @include justify-content(space-between);
     padding: .5rem 1rem;
+    > .container,
+    > .container-fluid{
+        @include display-flex;
+        @include flex-wrap(wrap);
+        @include align-items(center);
+        @include justify-content(space-between);
+    }
     &-brand{
         display: inline-block;
         padding-top: .3rem;
@@ -22,13 +22,8 @@
         white-space: nowrap;
     }
     &-nav{
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
+        @include display-flex;
+        @include flex-direction(column);
         padding-left: 0;
         margin-bottom: 0;
         list-style: none;

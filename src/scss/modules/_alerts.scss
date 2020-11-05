@@ -1,55 +1,45 @@
-html{
-    font-size: 16px;
-}
+
 .alert{
     padding: 0.75rem 1.25rem;
     margin-bottom: 1rem;
     border: 1px solid transparent;
     border-radius: 0.25rem;
     &-primary{
-        @extend .alert;
         color: $pri-fn;
         background-color: $pri-bg;
         border-color: $pri-border;
     }
     &-secondary{
-        @extend .alert;
         color: $secondary-fn;
         background-color: $secondary-bg;
         border-color: $secondary-border;
     }
     &-success{
-        @extend .alert;
         color: $success-fn;
         background-color: $success-bg;
         border-color: $success-border;
     }
     &-danger{
-        @extend .alert;
         color: $danger-fn;
         background-color: $danger-bg;
         border-color: $danger-border;
     }
     &-info{
-        @extend .alert;
         color: $info-fn;
         background-color: $info-bg;
         border-color: $info-border;
     }
     &-warning{
-        @extend .alert;
         color: $warning-fn;
         background-color: $warning-bg;
         border-color: $warning-border;
     }
     &-light{
-        @extend .alert;
         color: $light-fn;
         background-color: $light-bg;
         border-color: $danger-border;
     }
     &-dark{
-        @extend .alert;
         color: $dark-fn;
         background-color: $dark-bg;
         border-color: $dark-border;

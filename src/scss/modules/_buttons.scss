@@ -2,16 +2,14 @@ html{
     font-size: 16px;
 }
 @mixin btn($name,$color,$bgcolor){
-    &-#{$name}{
-      @extend .btn;
+    &-#{$name}{  
       color: $color;
       background-color:$bgcolor;
       border-color: $bgcolor;
     }
 }
 @mixin btn-outline($name,$color) {
-    &-#{$name}{
-        @extend .btn-outline;
+    &-#{$name}{     
         color: $color;
         border-color: $color;
     }
@@ -26,8 +24,7 @@ html{
     font-weight: 400;
     text-align: center;
     vertical-align: middle;
-    line-height: 1.5;
-    
+    line-height: 1.5; 
     opacity: 0.7;
     margin: 0 0 0 10px;
     @include btn(pri,$btn-wfn,$btn-pri);
@@ -40,7 +37,6 @@ html{
     @include btn(dark,$btn-wfn,$btn-dark);
     @include btn(link,$btn-bfn,$btn-link);
     &-outline{
-        @extend .btn;
         background-color: transparent;
         background-image: none;
         @include btn-outline(pri,$btn-pri);
@@ -90,7 +86,6 @@ html{
 @include btn-outline-hover(info,$btn-wfn,$btn-info);
 @include btn-outline-hover(light,$btn-bfn,$btn-light);
 @include btn-outline-hover(dark,$btn-wfn,$btn-dark);
-
 .btn:not(:disabled):not(.disabled) {
     cursor: pointer;
 }

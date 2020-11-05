@@ -3,14 +3,14 @@ $inputgr-bd:#ced4da;
 
 
 .input-group{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: flex-start;
+    @include display-flex;
+    @include flex-wrap(wrap);
+    @include align-items;
+    @include justify-content;
     width: 100%;
     &-text{
-        display: flex;
-        align-items: center;
+        @include display-flex;
+        @include align-items(center);
         padding: .75rem .75rem;
         margin-bottom: 0;
         text-align: center;

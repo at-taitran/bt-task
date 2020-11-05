@@ -17,27 +17,26 @@
 }
 @mixin row {
   @extend %clr;
-  flex-wrap:wrap;
+  @include display-flex;
+  @include flex-wrap(wrap);
+  @include flex-direction(row);
+  @include justify-content(space-between);
+  @include align-items(baseline);
+  @include align-content;
   margin-left: 15px;
   margin-right: 15px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: baseline;
-  align-content: stretch;
 }
 .row{
   @include row();
 }
 @mixin col {
   min-width: 1px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: stretch;
+  @include display-flex;
+  @include flex-direction(column);
+  @include flex-wrap(wrap);
+  @include justify-content(flex-start);
+  @include align-items;
+  @include align-content;
 }
 $total-columns: 12;
 @mixin custom-col($size) {
