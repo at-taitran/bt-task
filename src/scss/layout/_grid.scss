@@ -1,4 +1,3 @@
-
 @mixin container {
   margin-left: auto;
   margin-right: auto;
@@ -54,20 +53,23 @@ $total-columns: 12;
     }
   }
 }
-.col{
-  @include col();
-  width: 100%;
-  @include custom-col(sm);
-  @include custom-col(md);
-  @include custom-col(wd);
-  @include custom-col(lg);
-  @include custom-col(lst);
+// .col{
+//   @include col();
+//   width: 100%;
+//   @include custom-col(sm);
+//   @include custom-col(md);
+//   @include custom-col(wd);
+//   @include custom-col(lg);
+//   @include custom-col(lst);
+// }
+$breakpoint-name: sm,md,wd,lg,lst;
+@each $b in $breakpoint-name{
+  .col{
+    @include col();
+    width: 100%;
+    @include custom-col($b);
+  }
 }
-$small:480px;
-$medium:768px;
-$wide:960px;
-$large:1024px;
-$largest:1280px;
 @mixin respond-col($name,$width) {
   @media (min-width:$width){
     @for $i from 1 to $total-columns{
@@ -77,6 +79,11 @@ $largest:1280px;
     }
   }
 }
+$small:480px;
+$medium:768px;
+$wide:960px;
+$large:1024px;
+$largest:1280px;
 @include respond-col(sm,$small);
 @include respond-col(md,$medium);
 @include respond-col(wd,$wide);

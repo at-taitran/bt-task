@@ -163,4 +163,100 @@
   -ms-flex: $fg $fs $fb;
   flex: $fg $fs $fb;
 }
+//Custom flex container
+.flex-container {
+  @include display-flex();
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
+  @include align-items(center);
+  @include align-content(center);
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+}
+.flex-items:nth-child(1) {
+  display: block;
+  @include flex-grow(0);
+  @include flex-shrink(1);
+  @include flex-basis(auto);
+  @include align-self(auto);
+  @include order(0);
+}
+.flex-items:nth-child(2) {
+  display: block;
+  @include flex-grow(0);
+  @include flex-shrink(1);
+  @include flex-basis(auto);
+  @include align-self(auto);
+  @include order(0);
+}
 //---------------------------//
+// @mixin background ($name,$color){
+//   .bg-#{$name} {
+//     background-color: $color;
+//   }
+// }
+// ------ ANIMATION--------//
+@mixin animation-name($name) {
+  animation-name: $name;
+  -webkit-animation-name:$name;       //Chrome 4 ~ 42,Safari 4 ~ 8
+  -moz-animation-name: $name;         //Mozilla 5 ~ 15
+  -o-animation-name: $name;           
+}
+@mixin animation-delay ($value) {
+  animation-delay: $value;
+  -webkit-animation-delay: $value;
+  -moz-animation-delay: $value;
+  -o-animation-delay: $value;
+}
+@mixin animation-direction($value) {
+  animation-direction:$value;
+  -webkit-animation-direction: $value;
+  -moz-animation-direction: $value;
+  -o-animation-direction: $value;
+}
+@mixin animation-duration($value) {
+animation-duration: $value;
+-webkit-animation-duration: $value;
+-moz-animation-duration: $value;
+-o-animation-duration: $value;
+}
+@mixin animation-fill-mode($value) {
+animation-fill-mode: $value;
+-webkit-animation-fill-mode: $value;
+-o-animation-fill-mode: $value;
+}
+@mixin animation-iteration-count($value) {
+animation-iteration-count: $value;
+-webkit-animation-iteration-count: $value;
+-moz-animation-iteration-count: $value;
+-o-animation-iteration-count: $value;
+}
+@mixin animation-play-state($value) {
+animation-play-state: $value;
+-webkit-animation-play-state: $value;
+-moz-animation-play-state: $value;
+-o-animation-play-state: $value;
+}
+@mixin animation-timing-function($value) {
+animation-timing-function: $value;
+-webkit-animation-timing-function: $value;
+-moz-animation-timing-function: $value;
+-o-animation-timing-function: $value;
+}
+@mixin keyframes($animationName) {
+  @keyframes #{$animationName} {
+    @content;
+  }
+  @-webkit-keyframes #{$animationName} {
+      @content;
+  }
+  @-moz-keyframes #{$animationName} {
+     @content;
+  }
+  @-o-keyframes #{$animationName} {
+     @content;
+  }
+}

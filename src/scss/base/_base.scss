@@ -9,17 +9,21 @@ a{
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
-.defaul-flex-col{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: stretch;
-}
 .defaul-flex-row{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: stretch;
+  @include display-flex;
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  @include justify-content(flex-start);
+  @include align-items;
 }
+.defaul-flex-col{
+  @include display-flex;
+  @include flex-direction(column);
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
+  @include align-items;
+}
+//Back ground
+// @include background($pri-bg);
+// @include background($secondary-bg);
+// @include background($success-bg);
